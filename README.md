@@ -1,2 +1,8 @@
-# project-griffon
-Mobile Data &amp; Experience Validation Made Easy
+---
+description: Early Alpha Documentation
+---
+
+# Project Griffon
+
+Mobile Data & Experience Validation Made Easy
+
