@@ -1,4 +1,4 @@
-# Straightpipe events
+# Sending events
 
 The SDK enables the user to send data to the Straightpipe backend using the `sendEvent` API. This API  requires an SPIEvent instance to be passed in, which encapsulates the data in a format that the Straightpipe service expects.
 

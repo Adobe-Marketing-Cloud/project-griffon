@@ -1,10 +1,10 @@
-# SDK & Extension Implementation
+# Stand-alone Implementation
 
-## Connect to a Straightpipe session
+## Connect to a session
 
-To initialize the SDK, you need to connect to an active session. After you connect, the SDK can send data to and receive data from the Straightpipe service.
+To initialize the SDK, you need to connect to an active session. After you connect, the SDK can send data to and receive data from the Project Griffon service.
 
-To create a Straightpipe session, see [Using the Straightpipe UI](). After you create the session, you need need the details to connect to the session using the SDK.
+Use the UI to create a new session. After you create the session, you need need the details to connect to the session using the SDK.
 
 {% tabs %}
 {% tab title="Objective C" %}
