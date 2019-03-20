@@ -9,9 +9,9 @@ Use the UI to create a new session. After you create the session, you need need 
 {% tabs %}
 {% tab title="Objective C" %}
 ```objectivec
-//The "url" is the Straightpipe session URL (deeplink)  
+//The "url" is the Project Griffon session URL (deeplink)  
 //setup earlier. The URL is an instance of NSURL
-[ACPStraightpipe startSession:url];
+[ACPGriffon startSession:url];
 ```
 {% endtab %}
 
@@ -21,20 +21,20 @@ Use the UI to create a new session. After you create the session, you need need 
 {% endtabs %}
 
 {% hint style="info" %}
-After the `startSession` API is called with a valid Straightpipe URL, the SDK displays a dialog box in which app user can enter the session PIN or verification. 
+After the `startSession` API is called with a valid Straightpipe URL, the SDK displays a dialog box in which app user can enter the session PIN or verification.
 
 After a valid PIN is typed in and the app user clicks **Connect**, the SDK establishes a websocket connection. The SDK uses this connection to communicate with the backend service.
 {% endhint %}
 
-## Sending data to the Straightpipe service 
+## Sending data to the Project Griffon service 
 
 The SDK enables the application to send data to a connected session via the `sendEvent` API. If a session is not active, this API does not send anything out of the client device.
 
 {% tabs %}
 {% tab title="Objective C" %}
 ```objectivec
-id event = [[SPIEvent alloc] initWithVendor:@"com.myapp.vendor" type:@"type" payload:@{@"key": @"value"}];
-[ACPStraightpipe sendEvent:event];
+id event = [[ACPGriffonEvent alloc] initWithVendor:@"com.myapp.vendor" type:@"type" payload:@{@"key": @"value"}];
+[ACPGriffon sendEvent:event];
 ```
 {% endtab %}
 
@@ -46,7 +46,7 @@ id event = [[SPIEvent alloc] initWithVendor:@"com.myapp.vendor" type:@"type" pay
 {% endtabs %}
 
 {% hint style="info" %}
-The `sendEvent` API requires an event instance. For more information about a Straightpipe event, see the [SPIEvent](straightpipe-events.md#spievent-class) documentation.
+The `sendEvent` API requires an event instance. For more information about a Straightpipe event, see the [ACPGriffonEvent](straightpipe-events.md#spievent-class) documentation.
 {% endhint %}
 
 ## Ending a session
@@ -56,7 +56,7 @@ An active session can be closed by using the `endSession` API. After the session
 {% tabs %}
 {% tab title="Objective C" %}
 ```objectivec
-[ACPStraightpipe endSession];
+[ACPGriffon endSession];
 ```
 {% endtab %}
 
