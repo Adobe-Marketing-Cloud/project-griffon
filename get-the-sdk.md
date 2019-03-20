@@ -12,7 +12,7 @@ Before you continue - ensure you have the Experience Platform SDK Core installed
 {% tab title="iOS" %}
 ### 1. Implement the SDK
 
-Extract the beta zip file named  `ios-builds-0.0.3-alpha-Straightpipe.zip` . The extracted zip will have the following folder structure:
+Extract the beta zip file named  `ios-builds-0.0.7-alpha-Griffon.zip` . The extracted zip will have the following folder structure:
 
 * /iOS
   * /include
@@ -25,7 +25,7 @@ Extract the beta zip file named  `ios-builds-0.0.3-alpha-Straightpipe.zip` . The
 
 ### 2. Implement the Bridge
 
-Extract the beta zip file named v5-ios-builds-0.0.3.1-alpha-ACPStraightpipeBridge.zip. Add the iOS folder similar to the instructions as above. Then,
+Extract the beta zip file named v5-ios-builds-0.0.6-alpha-ACPGriffonBridge.zip. Add the iOS folder similar to the instructions as above. Then,
 
 * Select your project from the `Project Navigator`, select your App from the `TARGETS` frame, then select the `General`tab at the top of the window.
 * In the `Link Binary With Libraries` section, click the `+` link and add the following frameworks and libraries: `UIKit`, `SystemConfiguration`, `WebKit`, `UserNotifications`, `libsqlite3.0`, `libc++`, `libz`.
@@ -41,7 +41,7 @@ Registering the extension with Core will send Experience Platform SDK events an 
 #### Objective-C
 
 ```objectivec
-[ACPStraightpipeBridge registerExtension];
+[ACPGriffonBridge registerExtension];
 ```
 {% endtab %}
 {% endtabs %}
@@ -56,7 +56,7 @@ Once the extension has been registered, you may begin a session using the follow
 
 ```objectivec
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    [ACPStraightpipeBridge startSession:url];
+    [ACPGriffonBridge startSession:url];
     return false;
 }
 ```
