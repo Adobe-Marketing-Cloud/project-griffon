@@ -10,33 +10,47 @@ Before you continue, you must install the Experience Platform SDK Core extension
 
 {% tabs %}
 {% tab title="iOS" %}
-### 1. Implement the SDK
 
-Extract the `ios-builds-0.0.3-alpha-Straightpipe.zip`  beta zip file.  
+**1. Implement the SDK**
+
+a. Extract the `ios-builds-0.0.3-alpha-Straightpipe.zip` beta zip file and verify that the following structure exists:
   
-The extracted zip has the following folder structure:
-
-* /iOS
-  * /include
-    * Contains the required header files \(\*.h\).
-  * the `.a` file for the library
-* In the Xcode project, create a new Group, drag the iOS folder under the group, and verify the following:
+   * /iOS
+     * /include, which contains the required header files \(\*.h\).
+     * the `.a` file for the library
+ 
+b. In the Xcode project, create a new Group, drag the iOS folder under the group, and verify the following:
+ 
   * **The Copy Items if needed checkbox** is selected.
   * **Create groups** is selected.
   * In the **Add to targets** section, all the targets that need the SDK are selected.
 
-### 2. Implement the Bridge
+**2. Implement the Bridge**
 
-Extract the `v5-ios-builds-0.0.3.1-alpha-ACPStraightpipeBridge.zip` beta zip file. 
+a. Extract the `v5-ios-builds-0.0.3.1-alpha-ACPStraightpipeBridge.zip` beta zip file. 
 
-Add the iOS folder similar to the instructions in step 1 above. 
+b. Follow the instructions in step 1 aobve to add the iOS folder. 
 
-Complete the following tasks:
+c. Complete the following tasks:
 
-1. Select your project from the `Project Navigator`, select your App from the `TARGETS` frame, and select the **General** tab at the top of the window.
-2. In the **Link Binary With Libraries** section, click the **+** link and add the following frameworks and libraries: 
+   a. Select your project from the `Project Navigator`, select your App from the `TARGETS` frame, and select the **General** tab at the top of the window.
+   
+   b. In the **Link Binary With Libraries** section, click the **+** link and add the following frameworks and libraries: 
 
-`UIKit`, `SystemConfiguration`, `WebKit`, `UserNotifications`, `libsqlite3.0`, `libc++`, `libz`.
+      * `UIKit`
+      
+      * `SystemConfiguration`
+      
+      * `WebKit`
+      
+      * `UserNotifications`
+      
+      * `libsqlite3.0`
+      
+      * `libc++`
+      
+      * `libz`
+
 {% endtab %}
 {% endtabs %}
 
